@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oiJ-UH-xde">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My little house-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Campus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-Xk-cAd">
+                                <rect key="frame" x="20" y="226.5" width="374" height="565.5"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-al-bdv">
+                                <rect key="frame" x="20" y="812" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjU-Wh-TGr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jba-Xk-pyP">
+                                <rect key="frame" x="20" y="177.5" width="374" height="29"/>
+                                <segments>
+                                    <segment title="Face"/>
+                                    <segment title="World"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choseCamera:" destination="BYZ-38-t0r" eventType="valueChanged" id="JOk-qU-I55"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chose camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb9-6f-RsO">
+                                <rect key="frame" x="153" y="149" width="108" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ctj-al-bdv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4uw-Yy-gBR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jba-Xk-pyP" secondAttribute="trailing" constant="20" id="CI5-iL-XaJ"/>
+                            <constraint firstItem="cIe-Xk-cAd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ejp-Kp-p1g"/>
+                            <constraint firstItem="Eb9-6f-RsO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Ejp-k2-xvG"/>
+                            <constraint firstItem="jba-Xk-pyP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Snc-K3-x6y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ctj-al-bdv" secondAttribute="bottom" constant="20" id="XGv-gb-lSE"/>
+                            <constraint firstItem="cIe-Xk-cAd" firstAttribute="firstBaseline" secondItem="jba-Xk-pyP" secondAttribute="baseline" constant="30" id="cco-uE-b2S"/>
+                            <constraint firstItem="jba-Xk-pyP" firstAttribute="top" secondItem="Eb9-6f-RsO" secondAttribute="bottom" constant="8" id="fLH-xp-Hxg"/>
+                            <constraint firstItem="Eb9-6f-RsO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gPX-qr-bWa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIe-Xk-cAd" secondAttribute="trailing" constant="20" id="i7s-vR-z6N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ctj-al-bdv" secondAttribute="trailing" constant="20" id="z1q-Xh-Qlf"/>
+                            <constraint firstItem="Ctj-al-bdv" firstAttribute="top" secondItem="cIe-Xk-cAd" secondAttribute="bottom" constant="20" id="z4E-PQ-axJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My little house" id="Ngj-ED-9dM"/>
+                    <connections>
+                        <outlet property="sceneView" destination="cIe-Xk-cAd" id="IOT-Gr-0Bg"/>
+                        <outlet property="selectTypeCamera" destination="jba-Xk-pyP" id="Ujf-85-fKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h49-LJ-i3C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oiJ-UH-xde" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JP7-mU-t38">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zp2-Jf-zWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewe-yw-Wli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="113"/>
         </scene>
     </scenes>
 </document>
