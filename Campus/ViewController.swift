@@ -9,7 +9,7 @@
 import ARKit
 
 class ViewController: UIViewController {
-
+    
     var configuration: ARConfiguration!
     
     @IBOutlet var sceneView: ARSCNView!
@@ -18,23 +18,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let campus = loadModel(name: "Cumpus.scnassets/campus.scn")!
-        campus.position = SCNVector3(0, -2, -5)
-       sceneView.scene.rootNode.addChildNode(campus)
+        campus.position = SCNVector3(-2, -2, -5)
+        sceneView.scene.rootNode.addChildNode(campus)
+        
+        let computerCampus = createCapus()
+        computerCampus.position = SCNVector3(3, 0 , -4)
+        sceneView.scene.rootNode.addChildNode(computerCampus)
+        
         selectTypeCamera.selectedSegmentIndex = 1
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         workCamera()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
     
     @IBAction func choseCamera(_ sender: UISegmentedControl) {
-       workCamera()
+        workCamera()
     }
     
     func createCapus() -> SCNNode {
@@ -50,7 +55,7 @@ class ViewController: UIViewController {
     private func workCamera() {
         switch selectTypeCamera.selectedSegmentIndex {
         case 0:
-           configuration =  ARFaceTrackingConfiguration.isSupported ? ARFaceTrackingConfiguration() : ARWorldTrackingConfiguration()
+            configuration =  ARFaceTrackingConfiguration.isSupported ? ARFaceTrackingConfiguration() : ARWorldTrackingConfiguration()
         case 1:
             configuration = ARWorldTrackingConfiguration()
         default:
