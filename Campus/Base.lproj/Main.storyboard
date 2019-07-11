@@ -19,17 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-Xk-cAd">
-                                <rect key="frame" x="20" y="226.5" width="374" height="565.5"/>
+                                <rect key="frame" x="20" y="226.5" width="374" height="630.5"/>
                             </arscnView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-al-bdv">
-                                <rect key="frame" x="20" y="812" width="374" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjU-Wh-TGr">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jba-Xk-pyP">
                                 <rect key="frame" x="20" y="177.5" width="374" height="29"/>
                                 <segments>
@@ -49,18 +40,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ctj-al-bdv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4uw-Yy-gBR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cIe-Xk-cAd" secondAttribute="bottom" constant="5" id="2L1-SD-WCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jba-Xk-pyP" secondAttribute="trailing" constant="20" id="CI5-iL-XaJ"/>
                             <constraint firstItem="cIe-Xk-cAd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ejp-Kp-p1g"/>
                             <constraint firstItem="Eb9-6f-RsO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Ejp-k2-xvG"/>
                             <constraint firstItem="jba-Xk-pyP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Snc-K3-x6y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ctj-al-bdv" secondAttribute="bottom" constant="20" id="XGv-gb-lSE"/>
                             <constraint firstItem="cIe-Xk-cAd" firstAttribute="firstBaseline" secondItem="jba-Xk-pyP" secondAttribute="baseline" constant="30" id="cco-uE-b2S"/>
                             <constraint firstItem="jba-Xk-pyP" firstAttribute="top" secondItem="Eb9-6f-RsO" secondAttribute="bottom" constant="8" id="fLH-xp-Hxg"/>
                             <constraint firstItem="Eb9-6f-RsO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gPX-qr-bWa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIe-Xk-cAd" secondAttribute="trailing" constant="20" id="i7s-vR-z6N"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ctj-al-bdv" secondAttribute="trailing" constant="20" id="z1q-Xh-Qlf"/>
-                            <constraint firstItem="Ctj-al-bdv" firstAttribute="top" secondItem="cIe-Xk-cAd" secondAttribute="bottom" constant="20" id="z4E-PQ-axJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
